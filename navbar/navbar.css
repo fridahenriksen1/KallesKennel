@@ -1,0 +1,25 @@
+/*----------Navbar Style----------*/
+
+/*Navbar bakgrundsfärg samma som resten av sidan*/
+.navbar{
+    background-color: #eef7f7 !important;
+}
+
+.navbar p{
+    margin-top: 20px;
+}
+
+.navbar img{
+    height: 90px;
+    margin-left: 40px;
+}
+
+.navbar-nav{
+    margin-right: 40px;
+}
+
+.nav-item{
+    font-size: 23px;
+    font-family: 'Nunito', sans-serif;
+    padding: 10px;
+}

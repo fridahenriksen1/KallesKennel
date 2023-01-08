@@ -1,0 +1,214 @@
+
+/*----------Carousel Style----------*/
+.carousel .carousel-item {
+    height: 700px;
+}
+  
+.carousel-item img {
+    position: relative;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel h1{
+    font-size: 100px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px black;
+}
+
+.carousel h2{
+    font-size: 50px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.carousel p {
+    font-size: 25px;
+    text-shadow: 2px 2px 5px black;
+}
+
+/*-----------Greeting style---------*/
+.greeting h2{
+    font-size: 80px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #306969;
+    text-shadow: 2px 2px 5px black;
+}
+
+.greeting h3{
+    font-size: 60px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #306969;
+    text-shadow: 2px 2px 5px black;
+}
+
+
+.greeting {
+    animation: 2s popup ease;
+    animation-iteration-count: 2;
+    animation-delay: 3s;
+  }
+
+@keyframes popup {
+    0% {
+        transform: scale(0);
+    }
+
+    25%{
+        transform: scale(2);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*-----------Color transition style---------*/
+#triangle {
+    background-color: #306969;
+    clip-path: polygon(0 100%, 100% 100%, 0 0);
+    width: 100%;
+    height: 200px;
+}
+
+#triangle2 {
+    background-color: #102323;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    width: 100%;
+    height: 60px;
+}
+
+.background {
+    background-color: #306969;
+}
+
+.b-example-divider {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/*----------- Picture grid style---------*/
+.home-row{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #306969;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.col-image{
+    flex-basis: 32%;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.col-image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 2%;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: #306969;
+    opacity: 70%;
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+.bottom-center {
+    padding: 30px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #306969 !important;
+}
+
+
+@media (max-width: 600px) {
+    .carousel-item{
+        max-height: 90%;
+    }
+    
+    .home-row{
+        flex-direction: column;
+        padding: 10px;
+        margin: 0px;
+    }
+
+    .col-image {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .greeting h2{
+        font-size: 25px;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    .greeting h3{
+        font-size: 15px;
+        text-shadow: none;
+    }
+
+    #triangle{
+        height: 50px;
+    }
+
+    #triangle2{
+        height: 20px;
+    }
+
+}
+
+

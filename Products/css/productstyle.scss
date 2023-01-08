@@ -1,0 +1,270 @@
+
+@import './sass/variables';
+@import './sass/navbar';
+@import './sass/footer';
+@import './sass/animation';
+@import './sass/default';
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css);
+@import url(https://pro.fontawesome.com/releases/v5.10.0/css/all.css);
+@import url(images/favicon.png);
+
+
+//MOBILSTORLEK
+*{
+    box-sizing: border-box;
+}
+
+.btn-back{
+    background-color: $medium-dark;
+    color: white;
+    position: relative;
+    top: 0;
+    left: 25px;
+    margin-bottom: 25px;
+}
+
+//accordion start
+.accordion-item h2{
+    text-align: center;
+}
+.btn-text b{
+    display:inline;
+}
+
+.btn-text:not(.collapsed)  span{
+    display:none
+}
+.btn-text.collapsed b {
+    display:none
+}
+.info-text{
+    font-weight: bold;
+    opacity: .6;
+}
+//accordion slut
+
+//gröna blocket längst upp av main
+main::before{
+    content: '';
+    display: block;
+    background-color:  $medium-dark;
+    height: 60px;
+    padding: 0;
+    margin-bottom: .5rem;
+}
+.my-main::before{
+    content: '';
+    display: block;
+    background-color:  $medium-dark;
+    height: 60px;
+    padding: 0;
+    margin-bottom: 4rem;
+}
+//gröna blocket
+
+//PRODUKTVISNING SIDAN
+.namn{
+    color:$medium-dark;
+    font-size: 70px;
+    font-weight: bold;
+}
+.intresse{
+    color: $medium-dark;
+    font-size: 20px;
+}
+.subtitle{
+    text-decoration: underline;
+}
+.om-mig p{
+        margin: 0;
+        padding: 5px;
+}
+
+
+.product-small-img{
+    img{
+        height: auto;
+        max-width: 70px;
+        padding-right: 10px;
+        margin: 10px 0;
+        cursor: pointer;
+        display: block;
+        opacity: .6;
+        transition: .5s all ease;
+        
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+.img-container{
+    img{
+        width: 100%;
+        height: auto;
+        padding-left: 10px;
+        max-width: 1200px;
+    }
+}
+.info-container{    
+    border: 1px solid gray;
+    text-align: center;
+    border-radius: 10px;
+    display:flex;
+    justify-content: space-between;
+    .info-text{
+        opacity: .5;
+        color: $dark;
+        font-weight: bold;
+    }
+}
+//PRODUKTVISNING SIDAN
+
+//PREVIEW SIDAN
+.title h1{
+    font-size: 45px;
+    transition: .5s all ease;
+    & span{
+        color:  $medium-dark;
+    }
+}
+.dog-preview{
+    position: relative;
+    border-radius: 10px;
+    background: $preview-background;
+    padding: 0;
+    margin-top: 2rem;
+    border: 10px solid $main-background;
+    transition: all .6s ease;
+    
+
+    &:hover{
+        background: $preview-hover; 
+        transform: scale(1.1);
+        z-index: 10;
+        border: 1px solid $main-background;
+    }
+    .dog-name{
+        font-size: 30px;
+        color:$medium-dark;
+        transition: .5s all ease;
+    }
+    p{
+        font-size: 15px;
+        padding: 0;
+        transition: .5s all ease;
+    }
+    .show-more{
+        a{
+            position:relative;
+            bottom: 10px;
+            width: 50%;
+            background-color: $medium-dark;
+            color: $medium-light;
+            outline-color: $medium-light;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+            transition:ease 1s all;
+            &:hover{
+                background-color:  $medium-light;
+                color:$medium-dark;
+            }
+        }
+    }
+    img{
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+}
+
+//PREVIEW SIDAN
+
+
+/////////////////
+.icon-female{
+    padding-right: .4rem;
+    color:pink;
+}
+.icon-male{
+    padding-right: .4rem;
+    color:blue;
+}
+.leveransklar{
+    color:green;
+    font-weight: bold;
+}
+
+
+@media (max-width: 300px){
+    .product-small-img img{
+        display: none;
+    }
+    .img-container img{
+        margin-bottom: 20px;
+    }
+}
+
+// mediaqueries för produktvisningarna
+//när skärmen når 576px
+@media (min-width: $small){
+        .title h1{
+        font-size: 55px;
+        & span{
+            color:  $medium-dark;
+        }
+    }
+    .dog-preview{    
+        
+        .dog-name{
+            font-size: 45px;
+            color:$medium-dark;
+        }
+        p{
+            font-size: 20px;
+            padding: 0;
+        }
+        
+        img{
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .show-more a{
+            font-size: 20px;
+            width: 70%;
+        }
+    }
+}
+@media (min-width: $medium){
+    .title h1{
+        font-size: 65px;
+}
+.show-more{
+    position: static;
+    display: flex;
+    align-items: end;
+    bottom: 0px;
+
+}
+}
+@media (min-width: $large)
+{
+.title h1{
+    font-size: 48px;
+}
+.dog-preview{
+    .pre-info{
+        padding: 0;
+        margin: 0;
+    }
+}
+}
+@media (min-width: $x-large){
+    .om-mig{
+        font-size: 1.3em;
+    }
+    .img-container{
+        height: 95%;
+        width: 90%;
+    }
+}

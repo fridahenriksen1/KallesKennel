@@ -1,0 +1,39 @@
+.wrapper{
+    display: inline-flex;
+    padding: 1%;
+    width: 100%;
+    .gif{
+        position: relative;
+        display: inline;
+        height: auto;      
+        width: 130px;
+
+    //standard syntax
+    animation: left-to-right 7s linear infinite ;
+    //för chrome och safari
+    -webkit-animation: left-to-right 7s linear infinite;
+    //för firefox
+    -moz-animation: left-to-right 7s linear infinite;
+    }
+}
+//standard animation syntax
+@keyframes left-to-right {
+    0%{
+        left: -150px;
+
+    }
+    100%{
+        left: 97%;
+    }
+}
+//för chrome och safari
+@-webkit-keyframes left-to-right {
+    0%{
+        left: -150px;
+        visibility: visible;
+    }
+    100%{
+        left: 100%;
+        visibility: hidden;
+    }
+}
